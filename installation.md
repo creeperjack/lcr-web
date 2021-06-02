@@ -1,23 +1,26 @@
 # Recommended Installation Guide
-## for Ubuntu Server 16.04
+## for Ubuntu Server 20.04 LTS
+#### These instructions assume the host will only be running lcr-web and that MongoDB will not be shared with other applications.
 
-### Install git, nodejs & mongodb
+### Install git, node.js & MongoDB
 
-If git isn't already installed, get it with APT
+If git isn't already installed, get it with apt:
 
 `sudo apt install git`
 
-And nodejs + npm
+Install node.js + npm:
 
 `sudo apt install nodejs npm`
 
-Install mongodb - [steps 1-4 on this guide](https://www.howtoforge.com/tutorial/install-mongodb-on-ubuntu-16.04/)
+Install MongoDB - ['Install MongoDB' section of this guide](https://www.howtoforge.com/how-to-install-and-use-mongodb-on-ubuntu-2004/):
 
-For security purposes - setup mongodb to only allow requests from localhost
+For security purposes - setup MongoDB to only allow requests from localhost:
 
-`sudo nano /etc/mongod.conf`
+Open MongoDB config: `sudo nano /etc/mongod.conf`
 
-Add the line `bind_ip = 127.0.0.1` and `systemctl restart mongodb`
+Add the line `bind_ip = 127.0.0.1`, save and exit
+
+Then run `systemctl restart mongodb`
 
 ### Install PM2
 
@@ -61,7 +64,7 @@ Save PM2 config to start server on reboot
 
 `pm2 save`
 
-And you're running!
+Hopefully, you're up and running!
 
 ## Maintenance
 
