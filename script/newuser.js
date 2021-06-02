@@ -9,6 +9,7 @@ var configString = fs.readFileSync('../config.json','utf8');
 
 const config = JSONC.parse(configString);
 
+//FIXME: this connection to mongo does not expect authentication. If authentication support is being kept, this needs fixing with login from config
 var dbUrl = `mongodb://${config.db_host}:${config.db_port}/${config.db_name}`;
 
 mongoose.connect(dbUrl).then(
