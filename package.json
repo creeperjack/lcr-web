@@ -11,12 +11,26 @@
     "type": "git",
     "url": "git+https://github.com/lsumedia/lcr-web.git"
   },
-  "author": "Loughborough Campus Radio",
+  "author": "Loughborough Students' Union Media",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/lsumedia/lcr-web/issues"
   },
   "homepage": "https://github.com/lsumedia/lcr-web#readme",
+  "contributors": [
+    {
+      "name": "Cameron Small",
+      "url": "https://github.com/camerontsmall"
+    },
+    {
+      "name": "Jack Connor-Richards",
+      "url": "https://github.com/jackconnorrichards"
+    },
+    {
+      "name": "Jack Anderson",
+      "url": "https://github.com/jdaandersj"
+    }
+  ],
   "dependencies": {
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
